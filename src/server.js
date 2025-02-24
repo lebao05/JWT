@@ -4,6 +4,7 @@ const createError = require("http-errors");
 const app = express();
 const port = process.env.PORT || 5000;
 const userRouter = require("./routes/user.route");
+require("./helpers/connection_mongodb");
 app.get("/", (req, res) => {
   console.log(test);
   res.send("hello");
